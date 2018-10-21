@@ -7,6 +7,11 @@ class Enemy extends Character {
   constructor (name, x, y, sprite = 'images/enemy-bug.png') {
     super(name, x, y, sprite)
   }
+
+  update () {
+    console.log('Update Enemy')
+    this.x += 10
+  }
 }
 
 // Update the enemy's position, required method for game
@@ -18,5 +23,4 @@ Enemy.prototype.update = function (dt) {
   // var now = Date.now()
   // this.update((now - dt) / 1000.0)
   // this.render()
-  
 }
