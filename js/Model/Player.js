@@ -4,7 +4,7 @@ class Player extends Character {
     super(name, x, y, sprite)
 
     this.score = 0
-    this.width = 101
+    this.width = 151
     this.height = 171
   }
 

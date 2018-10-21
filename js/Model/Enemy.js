@@ -3,6 +3,7 @@ class Enemy extends Character {
     super(name, x, y, sprite)
     this.width = 101 
     this.height = 171
+    this.timeSpeed = Date.now()
   }
 
   checkForCollision() {
@@ -12,23 +13,16 @@ class Enemy extends Character {
       player.y < this.y + (this.height/2) - spaceAdjustmentY && player.y + (player.height/2) - spaceAdjustmentY > this.y
     ) {
     player.resetPosition()
+    player.score = 0
   } 
 
   }
 
   update () {    
-    this.x += 10
+    var now = Date.now()
+    
+    this.x += (now - this.timeSpeed) / 1000.0
+    this.timeSpeed = now
     this.checkForCollision()
   }
-}
-
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
-Enemy.prototype.update = function (dt) {
-  // You should multiply any movement by the dt parameter
-  // which will ensure the game runs at the same speed for
-  // all computers.
-  // var now = Date.now()
-  // this.update((now - dt) / 1000.0)
-  // this.render()
 }
