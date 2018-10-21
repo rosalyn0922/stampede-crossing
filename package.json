@@ -1,0 +1,28 @@
+{
+  "name": "stampede-crossing",
+  "version": "1.0.0",
+  "description": "The goal of the game is for the player to cross  the ocean as many times without getting hit by an enemy bug. A score will be counted for every crossing in the ocean",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "liveServer": "live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosalyn0922/stampede-crossing.git"
+  },
+  "keywords": [
+    "stampede",
+    "crossing",
+    "stampede"
+  ],
+  "author": "Rosalyn Guerrero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rosalyn0922/stampede-crossing/issues"
+  },
+  "homepage": "https://github.com/rosalyn0922/stampede-crossing#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
