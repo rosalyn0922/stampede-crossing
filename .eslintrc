@@ -1,0 +1,12 @@
+{
+  "extends": "eslint:recommended",  
+  "parserOptions": {
+    "ecmaVersion": 6    
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes" : ["error", "single"],
+    "no-undef": "off",
+    "no-unused-vars": "off"
+  }
+}

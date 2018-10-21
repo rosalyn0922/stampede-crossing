@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/rosalyn0922/stampede-crossing#readme",
   "devDependencies": {
+    "eslint": "^5.7.0",
     "live-server": "^1.2.0"
   }
 }

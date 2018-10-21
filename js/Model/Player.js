@@ -4,6 +4,8 @@ class Player extends Character {
     super(name, x, y, sprite)
 
     this.score = 0
+    this.width = 101
+    this.height = 171
   }
 
   update () {
@@ -13,14 +15,6 @@ class Player extends Character {
 
   resetPosition () {
     this.y = 380
-  }
-
-  checkForCollision () {
-    for (const bug of allEnemies) {
-      if ((this.y + 40) <= bug.y || (this.x + 60) <= this.x) {
-        this.resetPosition()
-      }
-    }
   }
 
   handleInput (key) {
@@ -55,8 +49,7 @@ class Player extends Character {
       this.resetPosition()
       this.score++
       this.update()
-    }
-    this.checkForCollision()
+    }    
     // resets if it hits any of the bugs
     this.render()
   }

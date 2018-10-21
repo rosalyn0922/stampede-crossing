@@ -14,6 +14,7 @@
       } else {        
         bug.x += (Math.random() * linearSpeed) * (dt + 0.21)
       }
+      bug.checkForCollision()
     }
 
     lastTime = now

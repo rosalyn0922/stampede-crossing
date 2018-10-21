@@ -1,16 +1,24 @@
-class Enemy extends Character {
-  // Variables applied to each of our instances go here,
-  // we've provided one for you to get started
-
-  // The image/sprite for our enemies, this uses
-  // a helper we've provided to easily load images
+class Enemy extends Character {    
   constructor (name, x, y, sprite = 'images/enemy-bug.png') {
     super(name, x, y, sprite)
+    this.width = 101 
+    this.height = 171
   }
 
-  update () {
-    console.log('Update Enemy')
+  checkForCollision() {
+    const spaceAdjustmentX = 0
+    const spaceAdjustmentY = 0
+    if (player.x < this.x + (this.width/2) - spaceAdjustmentX && player.x + (player.width/2) - spaceAdjustmentX > this.x &&
+      player.y < this.y + (this.height/2) - spaceAdjustmentY && player.y + (player.height/2) - spaceAdjustmentY > this.y
+    ) {
+    player.resetPosition()
+  } 
+
+  }
+
+  update () {    
     this.x += 10
+    this.checkForCollision()
   }
 }
 
